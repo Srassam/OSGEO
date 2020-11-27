@@ -13,8 +13,16 @@
                 var userOS = window.navigator.platform
                 var mac = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
                 var wind = ['Win32', 'Win64', 'Windows', 'WinCE'],
-                    os = null;
+                var os = null;
+
+                if (mac.indexOf(platform) !== -1) {
+                    os = "Mac OS";
+                } else if (wind.indexOf(platform) !== -1) {
+                    os = "Windows";
+                }
+                return os;
             }
+            alert(getOS());
         </script>
     </body>
 </hmtl>
