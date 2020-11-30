@@ -16,13 +16,34 @@
                 var os = null;
 
                 if (mac.indexOf(platform) !== -1) {
-                    os = "Mac OS";
+                    os = "Welcome Mac OS User!";
+                    getLocation();
                 } else if (wind.indexOf(platform) !== -1) {
-                    os = "Windows";
+                    os = "Welcome Windows User!";
+                    getLocation();
                 }
                 return os;
             }
             alert(getOS());
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    alert = ("Geolocation not supported by browser.");
+                }
+                function showPosition(position) {
+                    var lat = position.coords.latitude;
+                    var long = position.coords.longitude;
+                    console.log("Your current global position is" + lat + long)
+
+                    redirect(lat, lon);
+                }
+                function redirect(lat, long) {
+
+                }
+            }
+
         </script>
     </body>
 </hmtl>
