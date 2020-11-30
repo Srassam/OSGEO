@@ -8,11 +8,11 @@
 
     <body>
         <script>
-            function OS() {
+            function getOS() {
                 var userAgent = window.navigator.userAgent
-                var userOS = window.navigator.platform
-                var mac = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-                var wind = ['Win32', 'Win64', 'Windows', 'WinCE'],
+                var platform = window.navigator.platform
+                var mac = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K']
+                var wind = ['Win32', 'Win64', 'Windows', 'WinCE']
                 var os = null;
 
                 if (mac.indexOf(platform) !== -1) {
