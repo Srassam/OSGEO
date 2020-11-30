@@ -37,10 +37,14 @@
                     var long = position.coords.longitude;
                     console.log("Your current global position is" + lat + long)
 
-                    redirect(lat, lon);
+                    redirect(lat, long);
                 }
                 function redirect(lat, long) {
-
+                    if (lat >= 30 && long <= -100) {
+                        alert("welcome Westerner!");
+                    } else {
+                        alert("welcome Easterner!");
+                    }
                 }
             }
 
